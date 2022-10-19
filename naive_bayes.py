@@ -71,9 +71,7 @@ for (x_testSample, y_testSample) in zip(X_test, y_test):
         correct += 1
         # print("correct = " + str(correct))
 # print(correct)
-if correct/10 > accuracy:
-    accuracy = correct/10
-correct = 0
+accuracy = correct/10
 print("naive_bayes accuracy: " + str(accuracy))
 
 
