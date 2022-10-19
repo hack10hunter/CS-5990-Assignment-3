@@ -62,15 +62,15 @@ accuracy = 0
 correct = 0
 for (x_testSample, y_testSample) in zip(X_test, y_test):
     prediction = clf.predict([x_testSample])
-    print("prediction = ")
-    print(prediction)
-    print("real = ")
-    print(y_testSample)
+#     print("prediction = ")
+#     print(prediction)
+#     print("real = ")
+#     print(y_testSample)
     difference = 100*(abs(prediction - y_testSample)/y_testSample)
     if difference >= - 15 and difference <= 15:
         correct += 1
-        print("correct = " + str(correct))
-print(correct)
+        # print("correct = " + str(correct))
+# print(correct)
 if correct/10 > accuracy:
     accuracy = correct/10
 correct = 0
