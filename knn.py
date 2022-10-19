@@ -7,7 +7,6 @@
 #-----------------------------------------------------------*/
 
 #importing some Python libraries
-from turtle import ycor
 from sklearn.neighbors import KNeighborsRegressor
 import numpy as np
 import pandas as pd
