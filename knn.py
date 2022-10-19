@@ -50,7 +50,8 @@ for k in k_values:
                 # print(prediction)
                 # print("real = ")
                 # print(y_testSample)
-                if 100*(abs(prediction - y_testSample)/y_testSample) <= 15:
+                difference = 100*(abs(prediction - y_testSample)/y_testSample)
+                if difference >= - 15 and difference <= 15:
                     correct += 1
                     # print("correct = " + str(correct))
             # print(correct)
