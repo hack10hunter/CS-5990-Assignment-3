@@ -3,7 +3,7 @@
 # FILENAME: knn.py
 # SPECIFICATION: Read weather_training.csv and estimate temperature for each data point in weather_test.csv
 # FOR: CS 5990- Assignment #3
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 20 minutes
 #-----------------------------------------------------------*/
 
 #importing some Python libraries
