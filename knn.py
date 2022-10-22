@@ -3,7 +3,7 @@
 # FILENAME: knn.py
 # SPECIFICATION: Read weather_training.csv and estimate temperature for each data point in weather_test.csv
 # FOR: CS 5990- Assignment #3
-# TIME SPENT: 20 minutes
+# TIME SPENT: how long it took you to complete the assignment
 #-----------------------------------------------------------*/
 
 #importing some Python libraries
@@ -17,10 +17,10 @@ w_values = ['uniform', 'distance']
 
 #reading the training data
 df = pd.read_csv('weather_training.csv', sep=',', header=0)
-X_train = np.array(df.values)[:,1:-1].astype('f')
-y_train = np.array(df.values)[:,-1].astype('f')
-# print(X_train)
-# print(y_train)
+X_training = np.array(df.values)[:,1:-1].astype('f')
+y_training = np.array(df.values)[:,-1].astype('f')
+# print(X_training)
+# print(y_training)
 tf = pd.read_csv('weather_test.csv', sep=',', header=0)
 X_test = np.array(tf.values)[:,1:-1].astype('f')
 y_test = np.array(tf.values)[:,-1].astype('f')
@@ -40,12 +40,12 @@ for k in k_values:
     for p in p_values:
         for w in w_values:
             # print("for k = " + str(k) + ", p = " + str(p) + " and w = " + w)
-            knn = KNeighborsRegressor(n_neighbors=k, p=p, weights=w)
+            clf = KNeighborsRegressor(n_neighbors=k, p=p, weights=w)
             #fitting the knn to the data
             #--> add your Python code here
-            knn.fit(X_train, y_train)
+            clf = clf.fit(X_training, y_training)
             for (x_testSample, y_testSample) in zip(X_test, y_test):
-                prediction = knn.predict([x_testSample])
+                prediction = clf.predict([x_testSample])
                 # print("prediction = ")
                 # print(prediction)
                 # print("real = ")
